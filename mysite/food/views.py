@@ -8,7 +8,7 @@ from django.template import loader
 # Create your views here.
 def show_list(request):
     item_list = Item.objects.all()
-    context = {"item_list": item_list}
+    context = {"item_list": item_list} 
     return render(request, "food/index.html", context)
 
 
