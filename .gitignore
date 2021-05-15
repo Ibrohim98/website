@@ -1,0 +1,6 @@
+venv
+mysite/users/migrations/__pycache__
+mysite/food/migrations/__pycache__
+mysite/users/__pycache__
+mysite/mysite/__pycache__
+mysite/food/__pycache__

@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark nav-link">
-        <a href="http://127.0.0.1:8000/food" class="navbar-brand">FoodApp</a>
+        <a href="/food" class="navbar-brand">FoodApp</a>
         <div class="navbar">
             <a  class="nav-item nav-link", href=" {%url 'food:create_item'%}",>Add Item</a>
             <a  class="nav-item nav-link", href="#">Delete Item</a>
@@ -18,13 +18,26 @@
         </div>
     </nav>
     {% if messages %}
+    <div class="row">
         {% for message in messages %}
-            <div class="alert alert-{{message.tags}}">
+            <div class="col-md-4">
                 {{message}}
             </div>
         {% endfor %}
+    </div>
     {% endif %}
     {% block body %}
     {% endblock %}
+    
+    <footer class="bg-dark nav-link">
+        <div class="container">
+        <a href="/food" class="navbar-brand">Baursak</a>
+            <div class="d-block">
+                <a class="text-light" href="https://www.instagram.com/">Instagram</a>
+                <a class="text-light" href="#">Telegram</a>
+                <a class="text-light" href="#">Facebook</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
